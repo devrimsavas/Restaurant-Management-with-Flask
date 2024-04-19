@@ -9,3 +9,14 @@ body {
 h3 {
     padding-top:20px;
 }
+
+table {
+    border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#addnewfood, #updatefoodprice, #removefood {
+    border-radius:5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}

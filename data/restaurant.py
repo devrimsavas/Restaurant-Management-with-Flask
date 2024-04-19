@@ -9,6 +9,7 @@ class Food:
     def update_food_price(self,new_price):
         self.food_price=new_price
         return self.food_price
+        
 
 
 class Restaurant:
@@ -23,8 +24,13 @@ class Restaurant:
         self.menu.append(food_to_add)
         return self.menu
 
-    def remove_an_food_from_menu(self,food_to_remove):
-        self.menu.remove(food_to_remove)
+    def remove_food_from_menu(self,food_to_remove):
+        for food_item in self.menu: 
+            if food_item.food_name==food_to_remove:
+                self.menu.remove(food_item)
+                return f"{food_to_remove} removed from menu"
+        return f"{food_to_remove} not found in menu"
+        
         
         return self.menu
    

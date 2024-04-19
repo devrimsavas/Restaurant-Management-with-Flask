@@ -65,6 +65,19 @@
                         <button type="submit" class="btn btn-primary mt-2">Update Price</button>
                     </form>
                 </div>
+                <!--Remove food from menu-->
+                <div class="col-4 border bg-danger p-3" id="removefood">
+                    <h5>REMOVE A FOOD FROM MENU</h5>
+                    <form action="/removefood" method="POST" class="form">
+                        <label for="removefoodname">Food Name</label>
+                        <select class="form-select" name="removefoodname" id="removefoodname">
+                            {% for item in menu.menu_items %}
+                                <option value="{{ item.food_name }}">{{ item.food_name }}</option>
+                            {% endfor %}
+                        </select>
+                        <button type="submit" class="btn btn-primary mt-2">Remove Food</button>
+                    </form>
+                </div>
             </div>
     </div>
 

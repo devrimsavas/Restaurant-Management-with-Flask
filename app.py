@@ -39,8 +39,9 @@ your_first_menu(your_restaurant)
 def index():
     title="Start Restaurant Menu"
     data= {"title":title}
+    menu_data=your_restaurant.display_menu()
     #return jsonify(data)
-    return render_template('index.html',title=title)
+    return render_template('index.html',title=title,menu=menu_data)
 
 
 @app.route("/menu")
@@ -57,5 +58,26 @@ def addnewfood():
     return render_template('index.html')
 
 
+@app.route("/updatefoodprice", methods=["POST"])
+def updatefoodprice():
+    update_food_name = request.form.get("updatefoodname")
+    update_food_price = float(request.form.get("updatefoodprice"))
+
+    # Find the food item in the restaurant's menu and update its price
+    for food_item in your_restaurant.menu:
+        if food_item.food_name == update_food_name:
+            message = food_item.update_food_price(update_food_price)
+            break
+    else:
+        message = f"Food item '{update_food_name}' not found in the menu"
+
+    # Render the template with the message
+    return render_template('index.html', message=message)
+
+@app.route("/removefood", methods=["POST"])
+def removefood():
+    remove_food_name = request.form.get("removefoodname")
+    your_restaurant.remove_food_from_menu(remove_food_name)
+    return render_template('index.html')
 if __name__=="__main__":
     app.run(port=3000,debug=True)
