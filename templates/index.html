@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <h3>{{ title }}</h3><br>
+    <form action="/menu" method="GET" class="form" id="getMenu" name="getMenu">
+        <button type="submit" class="btn btn-primary mb-2 ms-2">Get Menu</button>
+    </form>
+    <div class="container-fluid">
+
+    {% if menu %}
+        <table class="table table-striped table-rounded">
+            <thead class="table-dark">
+                <tr>
+                    <th>Item Number</th>
+                    <th>Food Name</th>
+                    <th>Food Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in menu.menu_items %}
+                    <tr>
+                        <td>{{ item.item_number }}</td>
+                        <td>{{ item.food_name }}</td>
+                        <td>{{ item.food_price }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="bg-warning" colspan="2">Total Price:</td>
+                    <td class="bg-info">{{ menu.total_price }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!--Add new food to menu-->
+    <div class="container-fluid">
+        <h3> Food Menu </h3><hr>
+            <div class="row">
+                <div class="col-4 border bg-info p-3" id="addnewfood">
+                    <h5>ADD A NEW FOOD TO MENU</h5>
+                    <form action="/addnewfood" method="POST" class="form">
+                        <label for="newfoodname">New Food Name</label>
+                        <input class="form-control" type="text" name="newfoodname" id="newfoodname">
+                        <label for="newfoodprice">New Food Price</label>
+                        <input class="form-control" type="number" name="newfoodprice" id="newfoodprice">
+                        <button type="submit" class="btn btn-primary mt-2">Add New Food</button>
+                    </form>
+                </div>
+    </div>
+
+    {% endif %}
+{% endblock %}
