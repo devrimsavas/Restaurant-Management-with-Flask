@@ -39,6 +39,7 @@
     <div class="container-fluid">
         <h3> Food Menu </h3><hr>
             <div class="row">
+                <!--Add new food to menu-->
                 <div class="col-4 border bg-info p-3" id="addnewfood">
                     <h5>ADD A NEW FOOD TO MENU</h5>
                     <form action="/addnewfood" method="POST" class="form">
@@ -49,6 +50,22 @@
                         <button type="submit" class="btn btn-primary mt-2">Add New Food</button>
                     </form>
                 </div>
+                <!--Update Price for a food-->
+                <div class="col-4 border bg-warning p-3" id="updateprice">
+                    <h5>UPDATE PRICE FOR A FOOD</h5>
+                    <form action="/updatefoodprice" method="POST" class="form">
+                        <label for="updatefoodname">Food Name</label>
+                        <select class="form-select" name="updatefoodname" id="updatefoodname">
+                            {% for item in menu.menu_items %}
+                                <option value="{{ item.food_name }}">{{ item.food_name }}</option>
+                            {% endfor %}
+                        </select>
+                        <label for="updatefoodprice">New Food Price</label>
+                        <input class="form-control" type="number" name="updatefoodprice" id="updatefoodprice">
+                        <button type="submit" class="btn btn-primary mt-2">Update Price</button>
+                    </form>
+                </div>
+            </div>
     </div>
 
     {% endif %}
