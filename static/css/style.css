@@ -26,3 +26,12 @@ table {
     transform: scale(1.01);
 
 }
+
+#menuTable{
+    
+    height:10px;
+    overflow-y:auto !important;
+    
+    
+}
+

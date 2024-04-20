@@ -9,7 +9,8 @@
     <div class="container-fluid">
 
     {% if menu %}
-        <table class="table table-striped table-rounded">
+    <div class="table-responsive" style="height:400px; overflow-y:auto;"> 
+        <table class="table table-striped table-rounded table-hover" >
             <thead class="table-dark">
                 <tr>
                     <th>Item Number</th>
@@ -34,9 +35,10 @@
             </tfoot>
         </table>
     </div>
+    </div>
 
     <!--Add new food to menu-->
-    <div class="container-fluid">
+    <div class="container-fluid mt-3 ">
         <h3> Food Menu </h3><hr>
             <div class="row">
                 <!--Add new food to menu-->

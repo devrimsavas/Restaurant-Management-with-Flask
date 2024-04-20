@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="mb-4">About Us</h1>
+            <p class="lead">Welcome to Our Restaurant - the perfect place for a memorable dining experience.</p>
+            <p>We pride ourselves on our high-quality ingredients and outstanding customer service. Our menu features a wide range of options from classic dishes to innovative new creations, ensuring there is something to suit every taste.</p>
+            <p>Founded in 1995 by Chef John Doe, Our Restaurant has grown from a small family-run operation into one of the city's most beloved dining destinations.</p>
+            <h2 class="mt-4">Our Mission</h2>
+            <p>Our mission is to provide delicious food in a welcoming atmosphere, ensuring every customer leaves satisfied and looking forward to their next visit.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='images/sample.jpg') }}" alt="Sample Image" class="img-fluid rounded">
+
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <h3>Our Team</h3>
+            <p>Our talented team is at the heart of everything we do. From our skilled chefs to our friendly waitstaff, everyone at Our Restaurant is dedicated to making your meal unforgettable.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Our Ingredients</h3>
+            <p>We source only the finest ingredients, prioritizing local and sustainable products whenever possible. This commitment to quality is evident in every dish we serve.</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Visit Us</h3>
+            <p>Come and experience Our Restaurant for yourself. We are located at 123 Main St, Anytown, USA. Make a reservation today and discover why we are a local favorite!</p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and its dependencies -->
+<script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+{% endblock %}

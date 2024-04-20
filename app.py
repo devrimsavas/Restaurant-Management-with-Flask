@@ -37,7 +37,7 @@ your_first_menu(your_restaurant)
 @app.route("/")
 
 def index():
-    title="Start Restaurant Menu"
+    title="Star Restaurant Menu"
     data= {"title":title}
     menu_data=your_restaurant.display_menu()
     #return jsonify(data)
@@ -79,5 +79,10 @@ def removefood():
     remove_food_name = request.form.get("removefoodname")
     your_restaurant.remove_food_from_menu(remove_food_name)
     return render_template('index.html')
+
+
+@app.route("/about",methods=["GET"]) 
+def about():
+    return render_template('about.html')
 if __name__=="__main__":
     app.run(host='0.0.0.0',port=3000,debug=True)
