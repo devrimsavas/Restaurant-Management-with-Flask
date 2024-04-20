@@ -15,8 +15,14 @@ table {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#addnewfood, #updatefoodprice, #removefood {
-    border-radius:5px;
+#addnewfood, #updateprice, #removefood {
+    border-radius:15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+#addnewfood:hover, #updateprice:hover, #removefood:hover {
+    transform: scale(1.01);
 
 }
