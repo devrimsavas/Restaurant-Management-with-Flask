@@ -1,0 +1,329 @@
+{
+    "Selim donmez ": {
+        "orders": [
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T03:08:35.553555"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 4,
+                "total_price": 36,
+                "timestamp": "2024-04-21T03:09:08.636070"
+            },
+            {
+                "item": "Pizza",
+                "quantity": 2,
+                "total_price": 24,
+                "timestamp": "2024-04-21T14:38:41.107652"
+            },
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T14:51:12.129804"
+            }
+        ],
+        "total_paid": 100
+    },
+    "MEhmet Selim": {
+        "orders": [
+            {
+                "item": "Spaghetti",
+                "quantity": 2,
+                "total_price": 22,
+                "timestamp": "2024-04-21T03:09:31.500044"
+            },
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T04:08:25.714954"
+            },
+            {
+                "item": "Pizza",
+                "quantity": 2,
+                "total_price": 24,
+                "timestamp": "2024-04-21T04:21:14.171140"
+            },
+            {
+                "item": "Burger",
+                "quantity": 1,
+                "total_price": 10,
+                "timestamp": "2024-04-21T04:22:49.546510"
+            },
+            {
+                "item": "Burger",
+                "quantity": 1,
+                "total_price": 10,
+                "timestamp": "2024-04-21T04:25:45.797188"
+            },
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T04:28:35.096999"
+            },
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T04:28:36.962432"
+            },
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T04:28:46.459345"
+            },
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T04:30:51.467190"
+            },
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T04:30:51.788459"
+            }
+        ],
+        "total_paid": 186
+    },
+    "Ahmet selim": {
+        "orders": [
+            {
+                "item": "Fried Chicken",
+                "quantity": 2,
+                "total_price": 18,
+                "timestamp": "2024-04-21T03:23:29.552428"
+            }
+        ],
+        "total_paid": 18
+    },
+    "Devrim Yilmaz": {
+        "orders": [
+            {
+                "item": "Burger",
+                "quantity": 3,
+                "total_price": 30,
+                "timestamp": "2024-04-21T04:34:20.118207"
+            },
+            {
+                "item": "Pizza",
+                "quantity": 2,
+                "total_price": 24,
+                "timestamp": "2024-04-21T04:36:01.442298"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 4,
+                "total_price": 36,
+                "timestamp": "2024-04-21T04:36:06.597130"
+            },
+            {
+                "item": "Salad",
+                "quantity": 2,
+                "total_price": 16,
+                "timestamp": "2024-04-21T04:36:20.170768"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 2,
+                "total_price": 18,
+                "timestamp": "2024-04-21T04:40:47.912038"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 2,
+                "total_price": 18,
+                "timestamp": "2024-04-21T04:42:34.082008"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 2,
+                "total_price": 18,
+                "timestamp": "2024-04-21T04:43:02.839269"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 2,
+                "total_price": 18,
+                "timestamp": "2024-04-21T04:43:15.561293"
+            },
+            {
+                "item": "Burger",
+                "quantity": 2,
+                "total_price": 20,
+                "timestamp": "2024-04-21T05:05:36.484422"
+            },
+            {
+                "item": "Burger",
+                "quantity": 12,
+                "total_price": 120,
+                "timestamp": "2024-04-21T05:06:35.280177"
+            }
+        ],
+        "total_paid": 318
+    },
+    "Selim Kalmaz": {
+        "orders": [
+            {
+                "item": "Salad",
+                "quantity": 2,
+                "total_price": 16,
+                "timestamp": "2024-04-21T04:37:00.053773"
+            }
+        ],
+        "total_paid": 16
+    },
+    "Malin Nilsen": {
+        "orders": [
+            {
+                "item": "Burger",
+                "quantity": 12,
+                "total_price": 120,
+                "timestamp": "2024-04-21T05:07:55.107719"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 34,
+                "total_price": 306,
+                "timestamp": "2024-04-21T05:08:05.037290"
+            },
+            {
+                "item": "Lasagna",
+                "quantity": 200,
+                "total_price": 3000,
+                "timestamp": "2024-04-21T05:08:13.506766"
+            },
+            {
+                "item": "Lasagna",
+                "quantity": 200,
+                "total_price": 3000,
+                "timestamp": "2024-04-21T05:08:14.375291"
+            },
+            {
+                "item": "Lasagna",
+                "quantity": 200,
+                "total_price": 3000,
+                "timestamp": "2024-04-21T05:20:22.014638"
+            },
+            {
+                "item": "Lasagna",
+                "quantity": 200,
+                "total_price": 3000,
+                "timestamp": "2024-04-21T05:20:24.810596"
+            },
+            {
+                "item": "Lasagna",
+                "quantity": 200,
+                "total_price": 3000,
+                "timestamp": "2024-04-21T05:20:26.495164"
+            },
+            {
+                "item": "Sushi",
+                "quantity": 4,
+                "total_price": 80,
+                "timestamp": "2024-04-21T13:19:21.467321"
+            },
+            {
+                "item": "Sushi",
+                "quantity": 4,
+                "total_price": 80,
+                "timestamp": "2024-04-21T13:20:39.215473"
+            },
+            {
+                "item": "Burger",
+                "quantity": 7,
+                "total_price": 70,
+                "timestamp": "2024-04-21T15:57:22.608412"
+            }
+        ],
+        "total_paid": 15656
+    },
+    "Malin Nilsen ": {
+        "orders": [
+            {
+                "item": "Salad",
+                "quantity": 12,
+                "total_price": 96,
+                "timestamp": "2024-04-21T05:09:07.665475"
+            },
+            {
+                "item": "Lasagna",
+                "quantity": 1212,
+                "total_price": 18180,
+                "timestamp": "2024-04-21T05:09:17.613053"
+            },
+            {
+                "item": "Sushi",
+                "quantity": 1212,
+                "total_price": 24240,
+                "timestamp": "2024-04-21T05:10:01.738038"
+            }
+        ],
+        "total_paid": 42516
+    },
+    "John Doe ": {
+        "orders": [
+            {
+                "item": "Fried Chicken",
+                "quantity": 2,
+                "total_price": 18,
+                "timestamp": "2024-04-21T13:17:52.104888"
+            },
+            {
+                "item": "Spaghetti",
+                "quantity": 1,
+                "total_price": 11,
+                "timestamp": "2024-04-21T13:18:02.062382"
+            },
+            {
+                "item": "Sushi",
+                "quantity": 4,
+                "total_price": 80,
+                "timestamp": "2024-04-21T13:18:08.858674"
+            }
+        ],
+        "total_paid": 109
+    },
+    "Paul the Developer": {
+        "orders": [
+            {
+                "item": "Pizza",
+                "quantity": 2,
+                "total_price": 24,
+                "timestamp": "2024-04-21T14:39:13.210091"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 4,
+                "total_price": 36,
+                "timestamp": "2024-04-21T14:39:18.326202"
+            },
+            {
+                "item": "Fried Chicken",
+                "quantity": 4,
+                "total_price": 36,
+                "timestamp": "2024-04-21T14:39:18.769847"
+            },
+            {
+                "item": "Salad",
+                "quantity": 12,
+                "total_price": 96,
+                "timestamp": "2024-04-21T14:39:25.949647"
+            },
+            {
+                "item": "Sushi",
+                "quantity": 122222,
+                "total_price": 2444440,
+                "timestamp": "2024-04-21T14:39:32.177615"
+            }
+        ],
+        "total_paid": 2444632
+    }
+}

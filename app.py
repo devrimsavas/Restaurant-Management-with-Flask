@@ -1,7 +1,9 @@
 
-from flask import Flask, render_template, request,jsonify
+from flask import Flask, render_template, request,jsonify,Response
 
 from data import Restaurant, Food, SaleBook,show_menu
+from datetime import date, datetime
+import json
 
 app = Flask(__name__,template_folder='templates')
 
@@ -31,6 +33,7 @@ def your_first_menu(restaurant):
 # Initialize your restaurant and menu
 your_restaurant = Restaurant('STAR RESTAURANT')
 your_first_menu(your_restaurant)
+customers=[]
 
 
 
@@ -84,5 +87,69 @@ def removefood():
 @app.route("/about",methods=["GET"]) 
 def about():
     return render_template('about.html')
+
+
+
+def initialize_orders_file():
+    try:
+        with open("orders.json", "r") as file:
+            # Try to parse the JSON file
+            json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        # If file does not exist or is empty/corrupted, initialize it
+        with open("orders.json", "w") as file:
+            json.dump({}, file)  # Write an empty dictionary
+
+@app.route('/getorder', methods=["POST"])
+def getorder():
+    customer = request.form.get("customername")
+    order_name = request.form.get("getordername")
+    quantity = int(request.form.get("getorderquantity"))
+
+    # Calculate the total price
+    total_price = 0
+    menu_item = next((item for item in your_restaurant.menu if item.food_name == order_name), None)
+    if menu_item:
+        total_price = menu_item.food_price * quantity
+
+    # Current timestamp
+    current_time = datetime.now().isoformat()
+    
+    # Load existing data
+    with open("orders.json", "r") as file:
+        orders = json.load(file)
+
+    # Append new order to customer's list of orders
+    if customer not in orders:
+        orders[customer] = {"orders": [], "total_paid": 0}
+    
+    orders[customer]["orders"].append({
+        "item": order_name,
+        "quantity": quantity,
+        "total_price": total_price,
+        "timestamp": current_time
+    })
+    orders[customer]["total_paid"] += total_price
+
+    # Save updated data
+    with open("orders.json", "w") as file:
+        json.dump(orders, file, indent=4)
+
+    # Generate receipt text
+    receipt_text = f"<h1>Receipt for {customer}</h1>"
+    receipt_text += "<ul>"
+    for order in orders[customer]["orders"]:
+        receipt_text += f"<li>{order['quantity']}x {order['item']} at ${order['total_price']:.2f} each</li>"
+    receipt_text += "</ul>"
+    receipt_text += f"<strong>Total Paid: ${orders[customer]['total_paid']:.2f}</strong>"
+
+    return jsonify({
+        "customer_data": orders[customer],
+        "receipt_text": receipt_text
+    })
+
+
+
 if __name__=="__main__":
+    initialize_orders_file()
     app.run(host='0.0.0.0',port=3000,debug=True)

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Receipt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/receipt-style.css') }}">
+</head>
+<body>
+    <div class="receipt-container">
+        {{ receipt_content | safe }}
+        <button onclick="window.print();">Print this page</button>
+    </div>
+</body>
+</html>
+
